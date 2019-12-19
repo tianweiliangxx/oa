@@ -1,7 +1,6 @@
 <template>
   <div class="index">
       <HeadNav></HeadNav>
-      <h1>这是index</h1>
       <router-view></router-view>
   </div>
 </template>
