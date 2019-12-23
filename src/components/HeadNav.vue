@@ -1,14 +1,12 @@
 <template>
   <div class="HeadNav">
      <el-menu
-      :default-active="activeIndex2"
       class="el-menu-demo"
       mode="horizontal"
-      @select="handleSelect"
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b"
-      router=true>
+      router>
       <li class="el-menu-item icon">协同办公OA系统</li>
       <el-menu-item index="officeper">个人办公</el-menu-item>
       <el-menu-item index="process">流程</el-menu-item>
@@ -37,7 +35,7 @@ export default {
         height 100%
         .icon
           background-color #fff
-          width 14%
+          width 177px
           font-family "迷你简行楷"
           font-size 18px
           color #000

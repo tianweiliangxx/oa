@@ -1,12 +1,12 @@
 <template>
-  <div class="index">
-      <h3>这是个人办公下的主页面</h3>
+  <div class="CenterPer">
+      <h3 style="color:#fff">邮件</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Index'
+  name: 'Mail'
 }
 </script>
 
