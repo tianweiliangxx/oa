@@ -21,10 +21,10 @@ import System from '../views/IndexPage/System.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  {
-    path: '*',
-    redirect: '/'
-  },
+  // {
+  //   path: '*',
+  //   redirect: '/'
+  // },
   {
     path: '/',
     components: {

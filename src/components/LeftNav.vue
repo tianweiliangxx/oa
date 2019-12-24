@@ -1,17 +1,7 @@
 <template>
   <div class="LeftNav">
     <ul class="NavTitle">
-      <li class="title">个人办公</li>
-      <router-link to="/officeper/centerper"><li>个人中心</li></router-link>
-      <router-link to="/officeper/mail"><li>邮件</li></router-link>
-      <li>通知公告</li>
-      <li>日程</li>
-      <li>单据查看</li>
-      <li>单据提醒</li>
-      <li>订阅和回执</li>
-      <li>会议</li>
-      <li>我的考勤</li>
-      <li>工作日报</li>
+      <slot></slot>
     </ul>
   </div>
 </template>
@@ -22,7 +12,7 @@ export default {
 }
 </script>
 
-<style lang="stylus" scoped>
+<style lang="stylus" >
     .LeftNav
         width 176px
         height  100%
