@@ -12,10 +12,9 @@ export default {
 }
 </script>
 
-<style lang="stylus" >
+<style lang="stylus">
     .LeftNav
         width 176px
-        height  100%
         position relative
         background-color #fff
         .NavTitle
@@ -23,9 +22,10 @@ export default {
             width 100%
             background-color #ccc
             line-height 40px
-            text-align center
+            text-align left
             li
               border-bottom 1px solid #ccc
+              padding 0 0 0 10px
               &:hover
                 cursor pointer
                 background-color rgba(200,200,200,.7)

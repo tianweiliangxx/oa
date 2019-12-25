@@ -15,6 +15,7 @@
         <li>流程监控</li>
       </LeftNav>
     </div>
+    <router-view class="main"></router-view>
   </div>
 </template>
 
@@ -40,6 +41,5 @@ export default {
       top 62px
       left 178px
       width 100%
-      height 100%
-      background-color #000
+
 </style>

@@ -1,21 +1,88 @@
 <template>
   <div class="index">
-      <HeadNav></HeadNav>
+    <div class="header">
+      <HeadNav @sideNav="sideNav"></HeadNav>
+    </div>
+    <div class="side">
+      <Administrative v-show="isShow.administrative"></Administrative>
+      <Attendance v-show="isShow.attendance"></Attendance>
+      <Client v-show="isShow.client"></Client>
+      <Document v-show="isShow.document"></Document>
+      <Finance v-show="isShow.finance"></Finance>
+      <OfficePer v-show="isShow.officeper"></OfficePer>
+      <Process v-show="isShow.process"></Process>
+      <ProcessModule v-show="isShow.processmodule"></ProcessModule>
+      <Resources v-show="isShow.resources"></Resources>
+      <System v-show="isShow.system"></System>
+    </div>
+    <div class="main">
       <router-view></router-view>
-      <router-view name="side"></router-view>
-      <router-view name="main"></router-view>
+    </div>
+    <div class="foot">
+
+    </div>
   </div>
 </template>
 
 <script>
 import HeadNav from '../components/HeadNav'
+import Administrative from '../views/IndexPage/Administrative'
+import Attendance from '../views/IndexPage/Attendance'
+import Client from '../views/IndexPage/Client'
+import Document from '../views/IndexPage/Document'
+import Finance from '../views/IndexPage/Finance'
+import OfficePer from '../views/IndexPage/OfficePer'
+import Process from '../views/IndexPage/Process'
+import ProcessModule from '../views/IndexPage/ProcessModule'
+import Resources from '../views/IndexPage/Resources'
+import System from '../views/IndexPage/System'
 
 export default {
   name: 'Index',
+  data () {
+    return {
+      isShow: {
+        headnav: false,
+        administrative: false,
+        attendance: false,
+        client: false,
+        document: false,
+        finance: false,
+        officeper: true,
+        process: false,
+        processModule: false,
+        resources: false,
+        system: false
+      }
+    }
+  },
   components: {
-    HeadNav
+    HeadNav,
+    Administrative,
+    Attendance,
+    Client,
+    Document,
+    Finance,
+    OfficePer,
+    Process,
+    ProcessModule,
+    Resources,
+    System
+  },
+  methods: {
+    sideNav (name) {
+      console.log(name)
+      for (let key in this.isShow) {
+        if (key === name) {
+          this.isShow[key] = true
+        } else {
+          this.isShow[key] = false
+        }
+        console.log(this.isShow[key])
+      }
+      console.log(name)
+    }
   }
-
 }
 </script>
 
@@ -23,7 +90,4 @@ export default {
     .index
         width 100%
         height  100%
-        .left
-          width 147px
-          height  400px
 </style>
