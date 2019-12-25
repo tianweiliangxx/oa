@@ -4,14 +4,14 @@
         <LeftNav>
           <li class="title">
             <i class="el-icon-monitor"></i>
-            个人办公
+             个人办公
             <i class="el-icon-search"></i>
             <i class="el-icon-s-fold"></i>
             <i v-show="false" class="el-icon-s-unfold"></i>
           </li>
           <router-link
             :to="{ path: '/index/officeper/centerper', query: { id:123 } }"
-            ><li><i class="d"></i>个人中心</li></router-link>
+            ><li><i class="el-icon-user"></i>个人中心</li></router-link>
           <router-link
            to="/index/officeper/mail"
            ><li><i class="el-icon-message"></i> 邮件</li></router-link>
@@ -19,8 +19,8 @@
           <li><i class="el-icon-date"></i> 日程</li>
           <li><i class="el-icon-search"></i> 单据查看</li>
           <li><i class="el-icon-star-off"></i> 单据提醒</li>
-          <li><i class="el-icon-collection-tag"></i>订阅和回执</li>
-          <li><i class="el-icon-collection-tag"></i>会议</li>
+          <li><i class="el-icon-collection-tag"></i> 订阅和回执</li>
+          <li><i class="el-icon-collection-tag"></i> 会议</li>
           <li><i class="el-icon-time"></i> 我的考勤</li>
           <li><i class="el-icon-edit-outline"></i> 工作日报</li>
         </LeftNav>

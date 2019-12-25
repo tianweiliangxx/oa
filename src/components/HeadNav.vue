@@ -5,7 +5,7 @@
       mode="horizontal"
       background-color="#545c64"
       text-color="#fff"
-      active-text-color="#ffd04b"
+      active-text-color="#98e165"
       router>
       <li class="el-menu-item icon">协同办公OA系统</li>
       <el-menu-item index="/index/officeper"><i class="el-icon-monitor"></i>个人办公</el-menu-item>
