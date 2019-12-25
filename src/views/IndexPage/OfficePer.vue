@@ -2,17 +2,27 @@
   <div class="OfficePer">
       <div class="leftNav">
         <LeftNav>
-          <li class="title">个人办公</li>
-          <router-link to="/officeper/centerper"><li>个人中心</li></router-link>
-          <router-link to="/officeper/mail"><li>邮件</li></router-link>
-          <li>通知公告</li>
-          <li>日程</li>
-          <li>单据查看</li>
-          <li>单据提醒</li>
-          <li>订阅和回执</li>
-          <li>会议</li>
-          <li>我的考勤</li>
-          <li>工作日报</li>
+          <li class="title">
+            <i class="el-icon-monitor"></i>
+            个人办公
+            <i class="el-icon-search"></i>
+            <i class="el-icon-s-fold"></i>
+            <i v-show="false" class="el-icon-s-unfold"></i>
+          </li>
+          <router-link
+            :to="{ path: '/index/officeper/centerper', query: { id:123 } }"
+            ><li><i class="d"></i>个人中心</li></router-link>
+          <router-link
+           to="/index/officeper/mail"
+           ><li><i class="el-icon-message"></i> 邮件</li></router-link>
+          <li><i class="el-icon-tickets"></i> 通知公告</li>
+          <li><i class="el-icon-date"></i> 日程</li>
+          <li><i class="el-icon-search"></i> 单据查看</li>
+          <li><i class="el-icon-star-off"></i> 单据提醒</li>
+          <li><i class="el-icon-collection-tag"></i>订阅和回执</li>
+          <li><i class="el-icon-collection-tag"></i>会议</li>
+          <li><i class="el-icon-time"></i> 我的考勤</li>
+          <li><i class="el-icon-edit-outline"></i> 工作日报</li>
         </LeftNav>
       </div>
       <router-view class="main"></router-view>
@@ -43,8 +53,6 @@ export default {
     .main
       position absolute
       top 62px
-      left 178px
-      width 100%
-      height 100%
-      background-color #000
+      left 180px
+      color #000
 </style>

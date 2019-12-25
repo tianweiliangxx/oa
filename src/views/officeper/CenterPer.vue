@@ -1,12 +1,17 @@
 <template>
   <div class="CenterPer">
-      <h3 style="color:#fff">个人中心</h3>
+      <h3>个人中心==={{this.getid}}</h3>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'CenterPer'
+  name: 'CenterPer',
+  computed: {
+    getid () {
+      return this.$router.currentRoute.query.id
+    }
+  }
 }
 </script>
 

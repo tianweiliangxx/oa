@@ -23,7 +23,4 @@ export default {
     .index
         width 100%
         height  100%
-        .left
-          width 147px
-          height  400px
 </style>

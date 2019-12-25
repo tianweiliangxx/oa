@@ -21,42 +21,47 @@ import System from '../views/IndexPage/System.vue'
 Vue.use(VueRouter)
 
 const routes = [
-  // {
-  //   path: '*',
-  //   redirect: '/'
-  // },
   {
-    path: '/',
+    path: '*',
+    redirect: '/index'
+  },
+  {
+    path: '/index',
     components: {
       default: Index,
       main: Main
     },
     children: [
-      { path: '/administrative', component: Administrative },
-      { path: '/attendance', component: Attendance },
-      { path: '/client', component: Client },
-      { path: '/document', component: Document },
-      { path: '/finance', component: Finance },
+      { path: '/index/', redirect: '/index/officeper' },
+      { path: '/index/administrative', component: Administrative },
+      { path: '/index/attendance', component: Attendance },
+      { path: '/index/client', component: Client },
+      { path: '/index/document', component: Document },
+      { path: '/index/finance', component: Finance },
       {
-        path: '/officeper',
+        path: '/index/officeper',
         components: {
           side: OfficePer
         },
         children: [
           {
-            path: '/officeper/centerper',
+            path: '/index/officeper/',
             component: CenterPer
           },
           {
-            path: '/officeper/mail',
+            path: '/index/officeper/centerper',
+            component: CenterPer
+          },
+          {
+            path: '/index/officeper/mail',
             component: Mail
           }
         ]
       },
-      { path: '/process', component: Process },
-      { path: '/processModule', component: ProcessModule },
-      { path: '/resources', component: Resources },
-      { path: '/system', component: System }
+      { path: '/index/process', component: Process },
+      { path: '/index/processModule', component: ProcessModule },
+      { path: '/index/resources', component: Resources },
+      { path: '/index/system', component: System }
     ]
   },
   {
