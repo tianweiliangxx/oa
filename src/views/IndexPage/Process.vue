@@ -15,7 +15,6 @@
         <li>流程监控</li>
       </LeftNav>
     </div>
-    <router-view class="main"></router-view>
   </div>
 </template>
 
@@ -33,13 +32,9 @@ export default {
 
 <style lang="stylus" scoped>
  .Process
-    .leftNav
-      position absolute
-      top 60px
     .main
       position absolute
       top 62px
       left 178px
-      width 100%
 
 </style>

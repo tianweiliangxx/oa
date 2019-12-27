@@ -14,7 +14,8 @@ export default {
 
 <style lang="stylus">
     .LeftNav
-        width 176px
+        width 100%
+        height 100%
         position relative
         background-color #fff
         .NavTitle

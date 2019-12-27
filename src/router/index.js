@@ -6,22 +6,25 @@ import About from '../views/About.vue'
 import ChildeAbout from '../views/ChildeAbout.vue'
 import ChildrenAbout from '../views/ChildrenAbout.vue'
 import CenterPer from '../views/officeper/CenterPer.vue'
+import Mail from '../views/officeper/Mail.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '*',
-    redirect: '/index'
+    redirect: '/index/main'
   },
   {
     path: '/index',
+    redirect: '/index/main',
     components: {
-      default: Index,
-      main: Main
+      default: Index
     },
     children: [
-      { path: '/index/officeper/centerper', component: CenterPer }
+      { path: '/index/main', component: Main },
+      { path: '/index/officeper/centerper', component: CenterPer },
+      { path: '/index/officeper/mail', component: Mail }
     ]
   },
   {

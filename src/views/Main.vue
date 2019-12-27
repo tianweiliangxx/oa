@@ -1,6 +1,6 @@
 <template>
   <div class="Main">
-      <h1>首页</h1>
+      <h1>打开了首页</h1>
   </div>
 </template>
 

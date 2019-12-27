@@ -9,13 +9,14 @@
       <Client v-show="isShow.client"></Client>
       <Document v-show="isShow.document"></Document>
       <Finance v-show="isShow.finance"></Finance>
-      <OfficePer v-show="isShow.officeper"></OfficePer>
+      <OfficePer class="OfficePer" v-show="isShow.officeper"></OfficePer>
       <Process v-show="isShow.process"></Process>
       <ProcessModule v-show="isShow.processmodule"></ProcessModule>
       <Resources v-show="isShow.resources"></Resources>
       <System v-show="isShow.system"></System>
     </div>
     <div class="main">
+      <TagsNav></TagsNav>
       <router-view></router-view>
     </div>
     <div class="foot">
@@ -26,6 +27,7 @@
 
 <script>
 import HeadNav from '../components/HeadNav'
+import TagsNav from '../components/TagsNav'
 import Administrative from '../views/IndexPage/Administrative'
 import Attendance from '../views/IndexPage/Attendance'
 import Client from '../views/IndexPage/Client'
@@ -50,7 +52,7 @@ export default {
         finance: false,
         officeper: true,
         process: false,
-        processModule: false,
+        processmodule: false,
         resources: false,
         system: false
       }
@@ -58,6 +60,7 @@ export default {
   },
   components: {
     HeadNav,
+    TagsNav,
     Administrative,
     Attendance,
     Client,
@@ -89,5 +92,22 @@ export default {
 <style lang="stylus">
     .index
         width 100%
-        height  100%
+        height 100%
+        .header
+          width 100%
+          height 8%
+          position absolute
+        .side
+          width 177px
+          height 701px
+          position absolute
+          top 60px
+          .OfficePer
+            width 100%
+        .main
+          width 1282px
+          height 699px
+          position absolute
+          top 62px
+          left 178px
 </style>
