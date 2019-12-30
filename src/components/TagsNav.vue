@@ -34,15 +34,17 @@ export default {
     clickIt (item) {
       console.log(item)
     },
-    closeTag(name){
+    closeTag (name) {
       this.removeTag(name)
+      if (this.$route.path !== this.tags[this.tags.length - 1].path) {
+        this.$router.push({ path: this.tags[this.tags.length - 1].path })
+      }
     }
   },
   watch: {
     '$route.path': {
       immediate: true,
       handler (n, o) {
-        console.log(n)
         for (let i = 0; i < this.tags.length; i++) {
           if (this.tags[i].path === n) {
             this.tags[i].unSelected = false
@@ -62,6 +64,7 @@ export default {
     height 42px
     background-color #ccc
     ul
+      font-size 14px
       list-style none
       li
         width 90px

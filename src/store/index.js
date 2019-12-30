@@ -14,7 +14,10 @@ export default new Vuex.Store({
   mutations: {
     addTag (state, name) {
       // 判断是否已经存在标签了
-      if (JSON.stringify(state.tags).indexOf(JSON.stringify({ name: name[0], path: name[1] })) === -1) {
+      if (
+        JSON.stringify(state.tags).indexOf(JSON.stringify({ name: name[0], path: name[1], unSelected: true })) === -1 &&
+        JSON.stringify(state.tags).indexOf(JSON.stringify({ name: name[0], path: name[1], unSelected: false })) === -1
+      ) {
         state.tags.push({ name: name[0], path: name[1], unSelected: true })
       }
     },
