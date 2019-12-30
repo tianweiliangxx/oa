@@ -4,16 +4,16 @@
       <li
         v-for="( item, i ) in tags"
         :key="i"
-        v-bind:class="{ unSelected: true}"
-      >
-        <router-link :to="item.path">
-          {{ item.name }}
-        </router-link>
-        <i
-          class="el-icon-close"
-          @click="removeTag(item.name)"
-          v-show=" item.name === '首页' ? false : true "></i>
-        </li>
+        v-bind:class="{ unSelected: item.unSelected }"
+        @click="test(item.unSelected)">
+          <router-link :to="item.path">
+            {{ item.name }}
+          </router-link>
+          <i
+            class="el-icon-close"
+            @click="closeTag(item.name)"
+            v-show=" item.name === '首页' ? false : true "></i>
+      </li>
     </ul>
   </div>
 </template>
@@ -30,6 +30,27 @@ export default {
     ...mapMutations(['removeTag']),
     test (item) {
       console.log(item)
+    },
+    clickIt (item) {
+      console.log(item)
+    },
+    closeTag(name){
+      this.removeTag(name)
+    }
+  },
+  watch: {
+    '$route.path': {
+      immediate: true,
+      handler (n, o) {
+        console.log(n)
+        for (let i = 0; i < this.tags.length; i++) {
+          if (this.tags[i].path === n) {
+            this.tags[i].unSelected = false
+          } else {
+            this.tags[i].unSelected = true
+          }
+        }
+      }
     }
   }
 }
@@ -52,4 +73,8 @@ export default {
         cursor pointer
       .unSelected
         background-color: #ccc
+        a
+          color #888888
+          &:hover
+            color #000
 </style>

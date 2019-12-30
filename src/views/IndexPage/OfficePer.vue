@@ -15,7 +15,7 @@
           <router-link
            to="/index/officeper/mail"
            ><li  @click="addTag(['邮件', '/index/officeper/mail'])"><i class="el-icon-message"></i> 邮件</li></router-link>
-          <li  @click="addTag('通知公告')"><i class="el-icon-tickets"></i> 通知公告</li>
+          <li  @click="addTag(['通知公告', '/index/officeper/mail'])"><i class="el-icon-tickets"></i> 通知公告</li>
           <li  @click="addTag('日程')"><i class="el-icon-date"></i> 日程</li>
           <li><i class="el-icon-search"></i> 单据查看</li>
           <li><i class="el-icon-star-off"></i> 单据提醒</li>

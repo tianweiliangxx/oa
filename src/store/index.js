@@ -7,7 +7,7 @@ export default new Vuex.Store({
   state () {
     return {
       tags: [
-        { name: '首页', path: '/index/main' }
+        { name: '首页', path: '/index/main', unSelected: true }
       ]
     }
   },
@@ -15,7 +15,7 @@ export default new Vuex.Store({
     addTag (state, name) {
       // 判断是否已经存在标签了
       if (JSON.stringify(state.tags).indexOf(JSON.stringify({ name: name[0], path: name[1] })) === -1) {
-        state.tags.push({ name: name[0], path: name[1] })
+        state.tags.push({ name: name[0], path: name[1], unSelected: true })
       }
     },
     removeTag (state, name) {

@@ -21,7 +21,7 @@ export default {
         .NavTitle
             height 40px
             width 100%
-            background-color #ccc
+            background-color #d9edf7
             line-height 40px
             text-align left
             li

@@ -98,16 +98,16 @@ export default {
           height 8%
           position absolute
         .side
-          width 177px
+          width 12%
           height 701px
           position absolute
           top 60px
           .OfficePer
             width 100%
         .main
-          width 1282px
+          width 88%
           height 699px
           position absolute
-          top 62px
-          left 178px
+          top 60px
+          left 12%
 </style>
