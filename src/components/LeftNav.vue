@@ -24,10 +24,15 @@ export default {
             background-color #d9edf7
             line-height 40px
             text-align left
-            li
+            .stair
               border-bottom 1px solid #ccc
               padding 0 0 0 10px
               &:hover
                 cursor pointer
-                background-color rgba(200,200,200,.7)
+                background-color rgba(245, 245, 245, .7)
+            .second
+              li
+                border-bottom 1px solid #ccc
+                padding 0 0 0 20px
+                background-color rgba(220, 220, 220, .7)
 </style>

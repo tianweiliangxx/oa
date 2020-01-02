@@ -18,7 +18,6 @@
       <el-menu-item index="/index/processmodule" @click="changeNav('processmodule')">流程模块</el-menu-item>
       <el-menu-item index="/index/system" @click="changeNav('system')">系统</el-menu-item>
     </el-menu>
-
   </div>
 </template>
 
@@ -26,8 +25,8 @@
 export default {
   name: 'HeadNav',
   methods: {
+    // 把点击的该项的值传给Index
     changeNav (name) {
-      console.log(name)
       this.$emit('sideNav', name)
     }
   }

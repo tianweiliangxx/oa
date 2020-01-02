@@ -5,7 +5,7 @@ import Main from '../views/Main.vue'
 import About from '../views/About.vue'
 import ChildeAbout from '../views/ChildeAbout.vue'
 import ChildrenAbout from '../views/ChildrenAbout.vue'
-import CenterPer from '../views/officeper/CenterPer.vue'
+import SettingPer from '../views/officeper/SettingPer.vue'
 import Mail from '../views/officeper/Mail.vue'
 
 Vue.use(VueRouter)
@@ -23,7 +23,7 @@ const routes = [
     },
     children: [
       { path: '/index/main', component: Main },
-      { path: '/index/officeper/centerper', component: CenterPer },
+      { path: '/index/officeper/settingper', component: SettingPer },
       { path: '/index/officeper/mail', component: Mail }
     ]
   },

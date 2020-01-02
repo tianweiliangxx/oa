@@ -2,18 +2,18 @@
   <div class="Client">
       <div class="leftNav">
       <LeftNav>
-        <li class="title">客户</li>
-        <router-link to="/officeper/centerper"><li>客户主页</li></router-link>
-        <router-link to="/officeper/mail"><li>客户公海库</li></router-link>
-        <li>客户</li>
-        <li>销售机会</li>
-        <li>合同</li>
-        <li>销售</li>
-        <li>收款单</li>
-        <li>付款单</li>
-        <li>客户统计</li>
-        <li>金额统计</li>
-        <li>客户查看</li>
+        <li class="title stair">客户</li>
+        <router-link to="/officeper/centerper" class="stair"><li>客户主页</li></router-link>
+        <router-link to="/officeper/mail" class="stair"><li>客户公海库</li></router-link>
+        <li class="stair">客户</li>
+        <li class="stair">销售机会</li>
+        <li class="stair">合同</li>
+        <li class="stair">销售</li>
+        <li class="stair">收款单</li>
+        <li class="stair">付款单</li>
+        <li class="stair">客户统计</li>
+        <li class="stair">金额统计</li>
+        <li class="stair">客户查看</li>
       </LeftNav>
     </div>
   </div>

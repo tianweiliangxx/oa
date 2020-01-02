@@ -73,17 +73,15 @@ export default {
     System
   },
   methods: {
+    // 控制左侧导航的显示
     sideNav (name) {
-      console.log(name)
       for (let key in this.isShow) {
         if (key === name) {
           this.isShow[key] = true
         } else {
           this.isShow[key] = false
         }
-        console.log(this.isShow[key])
       }
-      console.log(name)
     }
   }
 }
@@ -101,6 +99,7 @@ export default {
           width 12%
           height 701px
           position absolute
+          overflow-y auto
           top 60px
           .OfficePer
             width 100%

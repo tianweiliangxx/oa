@@ -1,19 +1,22 @@
 <template>
   <div class="TagsNav">
     <ul>
-      <li
+      <router-link
         v-for="( item, i ) in tags"
+        :to="item.path"
         :key="i"
-        v-bind:class="{ unSelected: item.unSelected }"
         @click="test(item.unSelected)">
-          <router-link :to="item.path">
+          <li
+            v-bind:class="{ unSelected: item.unSelected }">
+            <i v-bind:class = "item.icon"></i>
             {{ item.name }}
-          </router-link>
-          <i
-            class="el-icon-close"
-            @click="closeTag(item.name)"
-            v-show=" item.name === '首页' ? false : true "></i>
-      </li>
+            <i
+              class="el-icon-close closeStyle"
+              @click="closeTag(item.name)"
+              v-show=" item.name === '首页' ? false : true ">
+            </i>
+          </li>
+      </router-link>
     </ul>
   </div>
 </template>
@@ -34,14 +37,17 @@ export default {
     clickIt (item) {
       console.log(item)
     },
+    // 关闭当前标签页，打开最后一个标签页
     closeTag (name) {
       this.removeTag(name)
       if (this.$route.path !== this.tags[this.tags.length - 1].path) {
+        // 编程式路由
         this.$router.push({ path: this.tags[this.tags.length - 1].path })
       }
     }
   },
   watch: {
+    // 监听路由的变化，高亮对应的标签页
     '$route.path': {
       immediate: true,
       handler (n, o) {
@@ -74,6 +80,10 @@ export default {
         background-color #fff
         float left
         cursor pointer
+        position relative
+        .closeStyle
+          position absolute
+          right 1px
       .unSelected
         background-color: #ccc
         a

@@ -6,7 +6,7 @@
 
 <script>
 export default {
-  name: 'CenterPer',
+  name: 'SettingPer',
   computed: {
     getid () {
       return this.$router.currentRoute.query.id
